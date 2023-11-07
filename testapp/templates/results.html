@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+    </head>
+<body>
+ <h1> Employee Information</h1>
+{% if employees %}
+<table>
+    <thead>
+    <th> Employee number</th>
+    <th> Employee Name</th>
+    <th> Employee salary</th>
+    <th> Employee Address</th>
+    </thead>
+    {% for emp in employees %}
+    <tr>
+        <td> {{emp.eno}}</td>
+        <td>{{ emp.name}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.eaddress}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+ {% else %}
+<p> no employee Records found</p>
+
+{% endif %}
+
+
+</body>
